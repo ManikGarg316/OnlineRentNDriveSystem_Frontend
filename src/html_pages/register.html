@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #2c3e50, #3498db);
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+
+      form {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+        animation: fadeIn 0.8s ease-in-out;
+      }
+
+      /* @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        } */
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 4px;
+        animation: scaleIn 0.8s ease-in-out;
+      }
+
+      /* @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        } */
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: left;
+        animation: slideInLeft 0.5s ease-in-out;
+      }
+
+      /* @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        } */
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        transition: border-color 0.3s ease-in-out;
+        animation: slideInRight 0.5s ease-in-out;
+      }
+
+      /* @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        } */
+
+      button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease-in-out;
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      /* Icons */
+      .icon {
+        color: #555;
+        margin-right: 8px;
+      }
+
+      #user-icon:before {
+        content: "\1F464";
+        /* Unicode character for a person icon */
+      }
+
+      #password-icon:before {
+        content: "\1F512";
+        /* Unicode character for a key icon */
+      }
+
+      #mobile-icon:before {
+        content: "\1F4F1";
+        /* Unicode character for a mobile phone icon */
+      }
+
+      #name-icon:before {
+        content: "\1F464";
+        /* Unicode character for a person icon */
+      }
+
+      #email-icon:before {
+        content: "\1F4E7";
+        /* Unicode character for an email icon */
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Registration</h1>
+
+    <form id="registrationForm">
+      <!-- <img src="../assets/11291.jpeg" alt="Registration Image" /> -->
+
+      <label for="username"
+        ><span class="icon" id="user-icon"></span>Username:</label
+      >
+      <input type="text" id="username" name="username" required />
+
+      <label for="password"
+        ><span class="icon" id="password-icon"></span>Password:</label
+      >
+      <input type="password" id="password" name="password" required />
+
+      <label for="mobile"
+        ><span class="icon" id="mobile-icon"></span>Mobile No.:</label
+      >
+      <input type="tel" id="mobile" name="mobile" required />
+
+      <label for="name"><span class="icon" id="name-icon"></span>Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email"
+        ><span class="icon" id="email-icon"></span>Email:</label
+      >
+      <input type="email" id="email" name="email" required />
+
+      <button type="submit">Register</button>
+    </form>
+  </body>
+</html>
