@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import "../html_pages/53c17921e0c481ce.css";
+import "../styles/53c17921e0c481ce.css";
 import Car from "../assets/car.jpg";
 
 function LandingPage() {
