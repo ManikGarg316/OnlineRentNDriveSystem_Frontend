@@ -14,7 +14,7 @@ import {
 } from './NavbarStyle';
 import { NavbarData } from './NavbarData';
 
-export default function Navbar() {
+function Navbar() {
 	const screenSize = 580;
 	const [menu, setMenu] = useState(false);
 	const [toggleMenu, setToggleMenu] = useState(false);
@@ -57,3 +57,5 @@ export default function Navbar() {
 		</div>
 	);
 }
+
+export default Navbar;

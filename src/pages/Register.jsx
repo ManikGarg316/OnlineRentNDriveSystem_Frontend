@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import axios from 'axios';
 // import { useNavigate } from "react-router-dom";
 import "../styles/loginforms.css";
+import { useNavigate } from "react-router-dom";
 function Register() {
-  const [form, setForm] = useState({});
+  const navigate = useNavigate();
+  const [message, setMessage] = useState("");
+  const [form, setForm] = useState({"role":"USER"});
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -11,6 +15,36 @@ function Register() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(form);
+    // axios.post("http://localhost:9000/signup",{
+    //   data: form
+    // }).then((response) => {
+    //   console.log(response.data);
+    // })
+//     fetch("http://localhost:9000/signup",
+// {
+//     headers: {
+//       'Accept': 'application/json',
+//       'Content-Type': 'application/json'
+//     },
+//     method: "POST",
+//     body: JSON.stringify(form)
+// })
+// .then(function(res){ console.log(res.json()) })
+// .catch(function(res){ console.log(res) })
+axios
+  .post("http://localhost:9000/signup", form, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json;charset=UTF-8",
+    },
+  })
+  .then(({data}) => {
+    setMessage(data + ". Redirecting...");
+    setTimeout(function(){
+      setMessage("");
+      navigate("/login")
+    }, 2000);
+});
   };
 
   return (
@@ -98,6 +132,7 @@ function Register() {
           Register
         </button>
       </form>
+      <p>{message}</p>
     </div>
   );
 }

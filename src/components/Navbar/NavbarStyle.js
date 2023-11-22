@@ -5,7 +5,7 @@ import { BiMenuAltRight, BiMenu } from 'react-icons/bi';
 export const Nav = styled.nav`
 	background-color: #333;
 	color: #fff;
-	height: 50px;
+	height: 80px;
 
 	display: flex;
 	align-items: center;
@@ -13,11 +13,8 @@ export const Nav = styled.nav`
 
 export const Container = styled.div`
 	width: 100%;
-	max-width: 1100px;
-	margin: 0 auto;
-
+	margin: auto 6%;
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
 
 	@media screen and (max-width: ${(props) => props.ss}px) {
@@ -28,7 +25,6 @@ export const Container = styled.div`
 export const Brand = styled.div`
 	width: 150px;
 	height: 100%;
-
 	display: grid;
 	place-items: center;
 `;
@@ -45,7 +41,7 @@ export const Menu = styled.ul`
 	display: flex;
 	align-items: center;
 	column-gap: 10px;
-
+	margin-bottom: 0px;
 	@media screen and (max-width: ${(props) => props.ss}px) {
 		width: 100%;
 		padding: 20px;

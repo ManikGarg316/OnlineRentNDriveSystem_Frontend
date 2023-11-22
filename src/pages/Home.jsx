@@ -1,5 +1,6 @@
+import Navbar from "../components/Navbar/Navbar";
 function Home() {
-  return <p>Hi! My name is Home! I am your homie!</p>;
+  return <Navbar />;
 }
 
 export default Home;

@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 import "../styles/loginforms.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 function Login() {
+  const navigate = useNavigate();
   const [form, setForm] = useState({});
 
   const handleChange = (e) => {
@@ -10,7 +13,18 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form);
+    // console.log(form);
+    axios
+  .post("http://localhost:9000/login", form, {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json;charset=UTF-8",
+    },
+  })
+  .then(({data}) => {
+    localStorage.setItem("token", data);
+    navigate("/home");
+});
   };
 
   return (

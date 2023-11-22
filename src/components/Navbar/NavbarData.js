@@ -1,11 +1,11 @@
 export const NavbarData = [
 	{
 		title: 'Home',
-		link: '/',
+		link: '/home',
 	},
 	{
-		title: 'Services',
-		link: '/services',
+		title: 'Rent A Car',
+		link: '/rentcar',
 	},
 	{
 		title: 'About',
